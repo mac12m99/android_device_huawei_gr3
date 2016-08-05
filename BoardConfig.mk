@@ -1,0 +1,50 @@
+USE_CAMERA_STUB := true
+RECOVERY_VARIANT := twrp
+
+# inherit from the proprietary version
+-include vendor/huawei/gr3/BoardConfigVendor.mk
+
+TARGET_NO_BOOTLOADER := false
+TARGET_BOARD_PLATFORM := mt6753t
+TARGET_ARCH := arm64
+TARGET_NO_BOOTLOADER := true
+TARGET_CPU_ABI := arm64-v8a
+TARGET_CPU_ABI2 := armeabi-v7a
+TARGET_CPU_ABI3 := armeabi
+TARGET_ARCH_VARIANT := armv8-a
+TARGET_CPU_VARIANT := generic
+TARGET_BOARD_SUFFIX := _64
+TARGET_CPU_SMP := true
+ARCH_ARM_HAVE_TLS_REGISTER := true
+
+TARGET_BOOTLOADER_BOARD_NAME := HWTAG-L6753
+
+TARGET_PREBUILT_KERNEL := device/huawei/gr3/prebuilt/kernel
+BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x03f88000 --tags_offset 0x0df88000
+BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 androidboot.selinux=permissive
+BOARD_KERNEL_BASE := 0x40078000
+BOARD_KERNEL_PAGESIZE := 2048
+BOARD_RAMDISK_OFFSET := 0x03f88000
+
+# fix this up by examining /proc/mtd on a running device
+BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 16777216
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3867148288
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 11206656000
+BOARD_CACHEIMAGE_PARTITION_SIZE := 419430400
+BOARD_FLASH_BLOCK_SIZE := 131072
+
+BOARD_HAS_NO_SELECT_BUTTON := true
+
+TARGET_USERIMAGES_USE_EXT4 := true
+TARGET_USERIMAGES_USE_F2FS := true
+TARGET_RECOVERY_PIXEL_FORMAT := "RGBA_8888"
+TARGET_RECOVERY_FSTAB := device/huawei/gr3/recovery/recovery.fstab
+TARGET_RECOVERY_LCD_BACKLIGHT_PATH := \"/sys/devices/platform/leds-mt65xx/leds/lcd-backlight/brightness\"
+TW_THEME := portrait_mdpi
+TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
+TARGET_SCREEN_HEIGHT := 1280
+TARGET_SCREEN_WIDTH := 720
+
+# jemalloc causes a lot of random crash on free()
+MALLOC_IMPL := dlmalloc

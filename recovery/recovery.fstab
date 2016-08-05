@@ -1,0 +1,7 @@
+/boot		emmc	/dev/block/mmcblk0p7	flags=display="boot";backup=1;wipeingui
+/cache		ext4	/dev/block/mmcblk0p23	flags=display="cache";backup=1;wipeingui;wipeduringfactoryreset
+/data		ext4	/dev/block/mmcblk0p24	flags=display="data";backup=1;wipeingui
+/recovery	emmc	/dev/block/mmcblk0p8	flags=display="recovery";backup=1
+/system		ext4	/dev/block/mmcblk0p22	flags=display="system";backup=1;wipeingui
+/external_sd    auto    /dev/block/mmcblk1p1    flags=display="External-Storage";storage;removable;backup=0
+
