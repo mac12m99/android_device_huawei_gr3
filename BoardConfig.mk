@@ -2,7 +2,7 @@ USE_CAMERA_STUB := true
 RECOVERY_VARIANT := twrp
 
 # inherit from the proprietary version
--include vendor/huawei/gr3/BoardConfigVendor.mk
+-include vendor/huawei/HWTAG-L6753/BoardConfigVendor.mk
 
 TARGET_NO_BOOTLOADER := false
 TARGET_BOARD_PLATFORM := mt6753t
@@ -19,7 +19,7 @@ ARCH_ARM_HAVE_TLS_REGISTER := true
 
 TARGET_BOOTLOADER_BOARD_NAME := HWTAG-L6753
 
-TARGET_PREBUILT_KERNEL := device/huawei/gr3/prebuilt/kernel
+TARGET_PREBUILT_KERNEL := device/huawei/HWTAG-L6753/prebuilt/kernel
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x03f88000 --tags_offset 0x0df88000
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x40078000
@@ -39,7 +39,7 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBA_8888"
-TARGET_RECOVERY_FSTAB := device/huawei/gr3/recovery/recovery.fstab
+TARGET_RECOVERY_FSTAB := device/huawei/HWTAG-L6753/recovery/recovery.fstab
 TARGET_RECOVERY_LCD_BACKLIGHT_PATH := \"/sys/devices/platform/leds-mt65xx/leds/lcd-backlight/brightness\"
 TW_THEME := portrait_mdpi
 TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
