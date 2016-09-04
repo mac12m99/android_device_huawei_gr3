@@ -1,20 +1,4 @@
-# OUKITEL K6000 && K10000
+Device tree for Huawei TAG-L01
 
-current state:
- * it boots
- * it is hardware accelerated
- * WiFi works
- * RIL
- * BT
- * Audio
- * Camera
- * MTP
- * Enforcing SELinux
-
-TODO:
-
- * GPS
-
-IF you are trying to build TWRP against cm-12.1 you will need this commit:
-* http://review.cyanogenmod.org/#/c/89474/1/recovery.te
-* DO NOT INCLUDE THIS COMMIT FOR NORMAL BUILDS!
+Vendor tree:https://github.com/mac12m99/android_vendor_huawei_gr3
+Kernel source:https://github.com/mac12m99/android_kernel_huawei_GR3
