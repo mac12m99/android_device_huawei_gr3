@@ -1,4 +1,4 @@
-rild.libpath=mtk-ril.so
+rild.libpath=/system/lib64/mtk-ril.so
 rild.libargs=-d /dev/ttyC0
 
 
@@ -69,3 +69,18 @@ ro.mtk_perf_response_time=1
 
 # SoundRecorder save file to sdcard
 persist.sys.primarysd=0
+
+ril.specific.sm_cause=0
+ril.external.md=0
+ril.current.share_modem=1
+ril.first.md=1
+ril.radiooff.poweroffMD=0
+ro.telephony.sim.count=2
+persist.radio.default.sim=0
+persist.radio.multisim.config=ss
+persist.gemini.sim_num=1
+ro.dual.sim.phone=false
+ro.hq.sim.dual_imsi=1
+ro.hq.sim.dual_imsi.remapn=1
+ro.hq.sim.dual_imsi.smsc=1
+

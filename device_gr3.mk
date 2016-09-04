@@ -1,7 +1,6 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-$(call inherit-product, build/target/product/full.mk)
 
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
@@ -39,7 +38,7 @@ PRODUCT_COPY_FILES += \
 	device/huawei/gr3/rootdir/meta_init.modem.rc:root/meta_init.modem.rc \
 	device/huawei/gr3/rootdir/meta_init.modem.rc:root/factory_init.rc \
 	device/huawei/gr3/rootdir/meta_init.modem.rc:root/factory_init.project.rc \
-	device/huawei/gr3/rootdir/init.rc:root/init.rc \
+    device/huawei/gr3/rootdir/init.rc:root/init.rc \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
     frameworks/native/data/etc/android.hardware.camera.autofocus.xml:system/etc/permissions/android.hardware.camera.autofocus.xml \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:system/etc/permissions/android.hardware.camera.flash-autofocus.xml \
@@ -123,6 +122,7 @@ PRODUCT_PACKAGES += \
 # Audio profiles used to address the correct audio devices for headset, etc.
 PRODUCT_COPY_FILES += \
     	$(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml \
+    	$(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml \
     	$(LOCAL_PATH)/configs/audio_device.xml:system/etc/audio_device.xml \
     	$(LOCAL_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf \
     	$(LOCAL_PATH)/configs/audio_effects.conf:system/etc/audio_effects.conf

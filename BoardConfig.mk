@@ -43,7 +43,7 @@ TARGET_CPU_ABI_LIST_32_BIT := $(TARGET_2ND_CPU_ABI),$(TARGET_2ND_CPU_ABI2)
 TARGET_CPU_ABI_LIST := $(TARGET_CPU_ABI_LIST_64_BIT),$(TARGET_CPU_ABI_LIST_32_BIT)
 
 # Use prebuilt webviewchromium to cut down build time
-PRODUCT_PREBUILT_WEBVIEWCHROMIUM := yes
+#PRODUCT_PREBUILT_WEBVIEWCHROMIUM := yes
  
 TARGET_GLOBAL_CFLAGS   += -mfpu=neon -mfloat-abi=softfp
 TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
@@ -82,6 +82,11 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 #for now lets use prebuilt
 TARGET_PREBUILT_KERNEL := device/huawei/gr3/prebuilt/kernel
 
+#TARGET_KERNEL_CONFIG := hq6753_65u_b2b_l1_defconfig
+#TARGET_KERNEL_SOURCE := kernel/huawei/gr3
+#KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/aarch64/aarch64-linux-android-4.9/bin
+#KERNEL_TOOLCHAIN_PREFIX := aarch64-linux-android-
+
 #system.prop
 TARGET_SYSTEM_PROP := device/huawei/gr3/system.prop
 
@@ -98,7 +103,7 @@ WIFI_DRIVER_FW_PATH_P2P:=P2P
 
 # RIL
 BOARD_CONNECTIVITY_VENDOR := MediaTek
-BOARD_USES_LEGACY_MTK_AV_BLOB := true
+BOARD_CONNECTIVITY_MODULE := conn_soc
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
