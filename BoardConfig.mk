@@ -5,7 +5,7 @@ LOCAL_PATH := device/huawei/gr3
 -include vendor/huawei/gr3/BoardConfigVendor.mk
 USE_CAMERA_STUB := true
 TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
-
+OUT := out/target/product/
 # Link against libxlog
 TARGET_LDPRELOAD += libxlog.so
 
@@ -367,5 +367,5 @@ BOARD_SEPOLICY_UNION += \
 	tunman.te 
 
 # Hack for build
-$(shell mkdir -p $(OUT)/obj/KERNEL_OBJ/usr)
+$(shell mkdir -p $(OUT)/$(PRODUCT_DEVICE)/obj/KERNEL_OBJ/usr)
 BLOCK_BASED_OTA := false

@@ -15,7 +15,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
 #vendor tree
-$(call inherit-product, vendor/huawei/gr3/gr3-vendor.mk)
+$(call if-exist-inherit-product, vendor/huawei/gr3/gr3-vendor.mk)
 
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi xxhdpi
 PRODUCT_AAPT_pref_CONFIG := xxhdpi
