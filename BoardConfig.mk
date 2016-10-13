@@ -179,14 +179,11 @@ TARGET_PROVIDES_INIT_RC := true
 
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/class/android_usb/android0/f_mass_storage/lun/file
 
-# SELinux
-BOARD_SEPOLICY_DIRS := \
-       device/huawei/gr3/sepolicy
 
 WITH_DEXPREOPT=false
 
 #SELinux: MTK added
-BOARD_SEPOLICY_DIRS += device/huawei/gr3/sepolicy
+#BOARD_SEPOLICY_DIRS += device/huawei/gr3/sepolicy
 
 
 # Hack for build
