@@ -174,7 +174,7 @@ BOARD_CHARGER_SHOW_PERCENTAGE := true
 
 # Fonts
 EXTENDED_FONT_FOOTPRINT := true
-
+PRODUCT_AAPT_PREF_CONFIG := hdpi
 TARGET_PROVIDES_INIT_RC := true
 
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/class/android_usb/android0/f_mass_storage/lun/file
