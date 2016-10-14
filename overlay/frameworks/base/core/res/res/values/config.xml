@@ -92,10 +92,6 @@
         <item>"bt-dun"</item>
     </string-array>
 
-
-    <!-- Boolean indicating whether Softap requires reloading AP firmware -->
-    <bool name="config_wifiApFirmwareReload">false</bool>
-
     <bool name="config_wifi_background_scan_support">true</bool>
 
     <!-- Default color for notification LED is white. -->
@@ -242,9 +238,6 @@
          turn the screen on
          NOTE ! - Enable for devices that have a fast response proximity sensor
     -->
-    <bool name="config_proximityCheckOnWake">true</bool>
-
-    <integer name="config_proximityCheckTimeout">100</integer>
 
     <!-- Indicate whether the SD card is accessible without removing the battery. -->
     <bool name="config_batterySdCardAccessibility">false</bool>
