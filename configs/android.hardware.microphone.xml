@@ -14,8 +14,7 @@
      limitations under the License.
 -->
 
-<!-- These are the location-related features for devices that include GPS. -->
+<!-- This is the standard feature indicating that the device includes microphone. -->
 <permissions>
-    <feature name="android.hardware.location" />
-    <feature name="android.hardware.location.gps" />
+    <feature name="android.hardware.microphone" />
 </permissions>

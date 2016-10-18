@@ -18,6 +18,13 @@ on post-fs-data
 #   chown radio radio /sys/class/BOOT/BOOT/boot/md
     chown radio radio /sys/kernel/ccci/boot
 
+    chown radio radio /dev/ccci_fs
+    chown radio radio /dev/ccci_ioctl0
+    chown radio radio /dev/ccci_ioctl1
+    chown radio radio /dev/ccci_ipc_1220_0
+    chown radio radio /dev/ccci_monitor
+    chown radio radio /dev/ccci_aud    
+
 #SeLinux
     mkdir /data/ccci_cfg 0770 system radio
     restorecon /data/ccci_cfg

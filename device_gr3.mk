@@ -39,6 +39,8 @@ PRODUCT_COPY_FILES += \
 	device/huawei/gr3/rootdir/meta_init.modem.rc:root/factory_init.rc \
 	device/huawei/gr3/rootdir/meta_init.modem.rc:root/factory_init.project.rc \
     device/huawei/gr3/rootdir/init.rc:root/init.rc \
+    $(LOCAL_PATH)/configs/android.hardware.microphone.xml:system/etc/permissions/android.hardware.microphone.xml \
+    $(LOCAL_PATH)/configs/android.hardware.camera.xml:system/etc/permissions/android.hardware.camera.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
     frameworks/native/data/etc/android.hardware.camera.autofocus.xml:system/etc/permissions/android.hardware.camera.autofocus.xml \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:system/etc/permissions/android.hardware.camera.flash-autofocus.xml \
@@ -47,12 +49,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
     frameworks/native/data/etc/android.hardware.wifi.direct.xml:system/etc/permissions/android.hardware.wifi.direct.xml \
     frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:system/etc/permissions/android.hardware.sensor.accelerometer.xml \
-    frameworks/native/data/etc/android.hardware.sensor.compass.xml:system/etc/permissions/android.hardware.compass.xml \
     frameworks/native/data/etc/android.hardware.sensor.light.xml:system/etc/permissions/android.hardware.sensor.light.xml \
     frameworks/native/data/etc/android.hardware.sensor.gyroscope.xml:system/etc/permissions/android.hardware.sensor.gyroscope.xml \
     frameworks/native/data/etc/android.hardware.sensor.proximity.xml:system/etc/permissions/android.hardware.sensor.proximity.xml \
-    frameworks/native/data/etc/android.hardware.sensor.stepcounter.xml:system/etc/permissions/android.hardware.sensor.stepcounter.xml \
-    frameworks/native/data/etc/android.hardware.sensor.stepdetector.xml:system/etc/permissions/android.hardware.sensor.stepdetector.xml \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.distinct.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.distinct.xml \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.xml \
@@ -63,7 +62,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:system/etc/permissions/android.hardware.audio.low_latency.xml \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:system/etc/permissions/android.hardware.bluetooth.xml \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml \
-    frameworks/native/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
     frameworks/native/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml
 
@@ -125,7 +123,11 @@ PRODUCT_COPY_FILES += \
     	$(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml \
     	$(LOCAL_PATH)/configs/audio_device.xml:system/etc/audio_device.xml \
     	$(LOCAL_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf \
-    	$(LOCAL_PATH)/configs/audio_effects.conf:system/etc/audio_effects.conf
+    	$(LOCAL_PATH)/configs/audio_effects.conf:system/etc/audio_effects.conf \
+        $(LOCAL_PATH)/configs/spn-conf.xml:system/etc/spn-conf.xml \
+        $(LOCAL_PATH)/configs/apns-conf.xml:system/etc/apns-conf.xml \
+        $(LOCAL_PATH)/configs/ecc_list.xml:system/etc/ecc_list.xml \
+        $(LOCAL_PATH)/configs/platform.xml:system/etc/permissions/platform.xml 
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -147,6 +149,22 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     	Stk
 
+# GPS
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/agps_profiles_conf2.xml:system/etc/agps_profiles_conf2.xml \
+
+# GPS HAL
+PRODUCT_PACKAGES += \
+      BGW \
+      gps.default \
+      mnld \
+      YGPS
+
+# SIM
+#PRODUCT_PACKAGES += \
+#     gsm0710muxd
+
+
 # FM Radio
 PRODUCT_PACKAGES += \
      	FmRadio \
@@ -162,6 +180,7 @@ PRODUCT_COPY_FILES += \
     	frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
     	frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
     	frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:system/etc/media_codecs_google_video_le.xml \
+        frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:system/etc/media_codecs_google_video_le.xml \
 
 # Thermal
 PRODUCT_COPY_FILES += \
